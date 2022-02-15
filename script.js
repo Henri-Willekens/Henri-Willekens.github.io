@@ -14,9 +14,23 @@ async function getResults() {
     gallery.style.display = "block";
     item.innerText = "Item - " + results[0].label;
     confidence.innerText =  "Confidence Level - " + results[0].confidence.toFixed(2) * 100 + "%";
+    speak(results[0].label)
 }
 
 function imageUpload(files) {
     image.src = URL.createObjectURL(files[0]);
     setTimeout(getResults, 50);
+}
+
+let synth = window.speechSynthesis
+
+function speak(text) {
+    if (synth.speaking) {
+        console.log('still speaking...')
+        return
+    }
+    if (text !== '') {
+        let utterThis = new SpeechSynthesisUtterance(text)
+        synth.speak(utterThis)
+    }
 }
