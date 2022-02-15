@@ -1,20 +1,28 @@
-const classifier = ml5.imageClassifier("MobileNet", modelLoaded);
+// Initialize the Image Classifier method with MobileNet
+const classifier = ml5.imageClassifier('MobileNet', modelLoaded);
 
+
+// When the model is loaded
 function modelLoaded() {
     console.log('Model Loaded!');
 }
 
-const image = document.querySelector(".image");
-const item = document.getElementById("item");
-const confidence = document.getElementById("confidence");
-const gallery = document.getElementById("gallery");
+let image = document.querySelector(".image");
+let item = document.getElementById("item");
+let confidence = document.getElementById("confidence");
+let gallery = document.getElementById("gallery");
 
 async function getResults() {
-    const results = await classifier.classify(image);
+    let results = await classifier.classify(image);
     gallery.style.display = "block";
     item.innerText = "Item - " + results[0].label;
     confidence.innerText =  "Confidence Level - " + results[0].confidence.toFixed(2) * 100 + "%";
-    speak(results[0].label)
+    btn.addEventListener("click", () =>{
+        console.log('Dit is de niwee'+ results[0].label)
+        console
+        speak(results[0].label)
+    })
+    
 }
 
 function imageUpload(files) {
@@ -25,6 +33,7 @@ function imageUpload(files) {
 let synth = window.speechSynthesis
 
 function speak(text) {
+    console.log("test")
     if (synth.speaking) {
         console.log('still speaking...')
         return
