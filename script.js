@@ -18,7 +18,7 @@ async function getResults() {
     item.innerText = "Item - " + results[0].label;
     confidence.innerText =  "Confidence Level - " + results[0].confidence.toFixed(2) * 100 + "%";
     btn.addEventListener("click", () =>{
-        console.log('Dit is de niwee'+ results[0].label)
+        console.log('Dit is de nieuw'+ results[0].label)
         console
         speak(results[0].label)
     })
