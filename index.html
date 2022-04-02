@@ -1,28 +1,22 @@
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- Load three.js -->
-    <script defer src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
-    <script defer src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
-    
-    <!-- GPU backend -->
-    <script defer src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
-    <!-- CPU backend -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-cpu"></script> -->
-    <!-- WASM backend -->
-    <!-- <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script> -->
-    
-    <script defer src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
-    <script defer src="./src/index.js"></script>
-</head>
-
-<body>
-    <h1>HANDPOSE API met landmarks</h1>
-    <div id="container">
-        <canvas id="output" ></canvas>
-        <video id="video" playsinline ></video>
-    </div>
-    <h2>Landmarks array voor KNN ⬇️</h2>
-    <div id="array">bla</div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Emotion Detection With face-api.js</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <img id="myImg" src="">
+        <input id="myFileUpload" type="file" onchange="uploadImage()" accept=".jpg, .jpeg, .png">
+        <div style="position: relative" class="margin">
+            <video onplay="onPlay(this)" id="inputVideo" autoplay muted></video>
+            <canvas id="overlay"></canvas>
+          </div>
+        <img src="emotions.jpg" alt="" />
+        <script src="face-api.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
