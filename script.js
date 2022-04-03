@@ -26,54 +26,37 @@ async function uploadImage() {
     faceapi.draw.drawDetections(canvas, resizedDimensions);
     faceapi.draw.drawFaceLandmarks(canvas, resizedDimensions);
     faceapi.draw.drawFaceExpressions(canvas, resizedDimensions);
-    console.log(detection)
-};
-
-
-
-
-//face detection video
-// window.onload = () => {
-//     detect();
-//   };
-  
-//   async function detect() {
-//     const canvas = document.querySelector("canvas");
-//     const context = canvas.getContext("2d");
-//     const faceDetector = new FaceDetector({ fastMode: true });
-//     const mediaStream = await navigator.mediaDevices.getUserMedia({
-//       video: { facingMode: "environment" }
-//     });
-  
-//     const video = document.createElement("video");
-//     video.srcObject = mediaStream;
-//     video.autoplay = true;
-//     video.onloadedmetadata = () => {
-//       canvas.width = video.videoWidth;
-//       canvas.height = video.videoHeight;
-//     };
-  
-//     function render() {
-//         faceDetector
-//         .detect(video)
-//         .then((faces) => {
-//           context.clearRect(0, 0, canvas.width, canvas.height);
-//           context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
-//           context.strokeStyle = "#FFFF00";
-//           context.lineWidth = 5;
+    i = 0
+    gezicht = detection[i].expressions;
+    i++
+    console.log(gezicht);
+    
+    anger = 1
+    disgust = 2
+    fear = 3
+    enjoy = 4
+    neut = 5
+    sadge = 6
+    surp = 7
+    var chart = new CanvasJS.Chart("chartContainer",
+              {
           
-//            faces.forEach((face) => {
-//              const { top, left, width, height } = face.boundingBox;
-//              context.beginPath();
-//              context.rect(left, top, width, height);
-//              context.stroke();
-//            });
-//         })
-//         .catch(console.error);
-//     }
-  
-//     (function renderLoop() {
-//       requestAnimationFrame(renderLoop);
-//       render();
-//     })();
-//   }
+              data: [
+              {
+               type: "scatter",
+               dataPoints: [
+          
+               { x: anger, y: gezicht.angry },
+               { x: disgust, y: gezicht.disgusted },
+               { x: fear, y: gezicht.fearful },
+               { x: enjoy, y: gezicht.happy },
+               { x: neut, y: gezicht.neutral },
+               { x: sadge, y: gezicht.sad},
+               { x: surp, y: gezicht.surprised }
+            ]
+        }
+        ]
+      });
+     
+     chart.render();
+     };

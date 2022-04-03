@@ -9,14 +9,18 @@
     </head>
     <body>
         
-        <img id="myImg" src="">
+        <img id="myImg" src="emotions.jpg">
         <input id="myFileUpload" type="file" onchange="uploadImage()" accept=".jpg, .jpeg, .png">
-        <div style="position: relative" class="margin">
+        <!-- <div style="position: relative" class="margin">
             <video onplay="onPlay(this)" id="inputVideo" autoplay muted></video>
             <canvas id="overlay"></canvas>
-          </div>
-        <img src="emotions.jpg" alt="" />
-        <script src="face-api.min.js"></script>
+          </div> -->
+          <div><h2>ML5 Neural Network Regression scatterplot
+          </h2></div>
+          <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+          <div id="chartContainer" style="height: 800px; width: 30%;">
+        </div>
+          <script src="face-api.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
