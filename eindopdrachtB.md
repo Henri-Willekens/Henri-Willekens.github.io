@@ -112,9 +112,9 @@ Waarom wel of niet?
 - Ben je zelf tevreden met het eindresultaat? Werkt het zo goed als je verwacht / gehoopt
 had? Waarom wel of niet?
 
-***Ik ben tevreden van wat ik heb gedaan omdat ik geleerd heb hoe AI werkt in emoties en gezichtsherkenning. Ook heb ik geleerd hoe je data kan uitlezen en op een grafiek kan plaatsen. Overigens heeft mijn verbeterde code en nieuwe model er voor gezorgt dat het sneller alle resultaten kan pakken dan mijn eerste concept.*** 
+***Ik ben tevreden van wat ik heb gedaan omdat ik geleerd heb hoe AI werkt in emoties en gezichtsherkenning. Ook heb ik geleerd hoe je data kan uitlezen en op een grafiek kan plaatsen. Overigens heeft mijn verbeterde code en nieuwe model er voor gezorgt dat het sneller alle resultaten kan pakken dan mijn eerste concept. Alleen zijn mijn HTML en CSS skills niet zo goed.*** 
 
 - Is je app zodanig goed dat eindgebruikers er zonder verdere instructies mee uit de
 voeten kunnen? Waarom wel of niet?
 
-***De instruc***
+***De instructies om mijn applicatie te gebruiken kan onduidelijk zijn want het werkt alleen op Chrome omdat je in chrome://flags/Experimental de Web Platform features en WebGL Developer Extensions moet enable.  ***

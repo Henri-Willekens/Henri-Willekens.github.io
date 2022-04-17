@@ -10,11 +10,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Dashboard emotion detection: happy - angry</title>
     <style>
         textarea {
-  position: absolute;
-    left: -100%;
-}
+            position: absolute;
+            left: -100%;
+        }
 
         #wrapper{ text-align:center; margin:10px auto; }
         #output_image{ width:550px; }
@@ -23,9 +24,9 @@
         }
         #logWindow {
         overflow: auto;
-        position: absolute;
+        position: relative;
         height: 150px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(136, 40, 201, 0.5);
         z-index: 20;
         }
         .container{
@@ -57,7 +58,7 @@
     <div class="inline">
         <center><span id="result_emotion"></span></center>
 
-        <canvas id="overlay" src="" style=" margin-top:10px;" />
+        <canvas id="overlay" style="max-width: 550px;" src="" style=" margin-top:10px;" />
     </div>
 
     <center style="padding:10px">
@@ -71,10 +72,10 @@
         </div>
 
 
- </center>
+    </center>
  <div><h2>
 </h2></div>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer" style="height: 370px; width: 50%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </div>
 
