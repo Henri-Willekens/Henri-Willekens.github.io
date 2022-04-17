@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Dashboard emotion detection: happy - angry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <center style="padding:10px">
+        <h4>
+            <div id="status">Model Loading ...</div>
+        </h4>
+        <div class="content">
+
+            <p>**Experimental Web Platform features** en **WebGL Developer Extensions** moet enabled zijn in Chrome via chrome://flags/</p>
+        </div>
+        <div id="wrapper" class="inline">
+            <p>Voeg foto's toe om te beginnen en klik vervolgens op run!</p>
+        <center style="padding:10px"><input id='uploadFile' type="file" accept="image/*" onchange="preview_image(event)"></center>
+        <img id="output_image" src="" style="max-width: 700px;" />
+        </div>
+    </center>
+
+<center>
+    <div class="inline">
+        <span id="result_emotion"></span>
+        <p></p>
+        <canvas id="overlay" src="" style=" max-width: 550px;" />
+    </div>
+</center>
+    <center style="padding:10px">
+        <div class="btn-group" style='margin-top:15px; margin-bottom:10px;'>
+            <button type="button" id="classify" class="btn btn-outline-primary" onclick="runModel()" href="#">Run! </button>
+        </div>
+                        <button id="button">Copy to Clipboard</button>
+        <div id="logWindow">
+            <pre id="myInput">
+                <span id="logger"></span> </pre>
+        </div>
+
+
+    </center>
+ <div><h2>
+</h2></div>
+<div id="chartContainer" style="height: 370px; width: 50%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</div>
+
+
+ <script src="app.js"></script>
+</body>
+
+</html>
